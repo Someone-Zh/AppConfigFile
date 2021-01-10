@@ -26,8 +26,12 @@ function install_vim(){
 		vim -c PlugInstall 
 		curl -fLo ~/.vimrc https://raw.githubusercontent.com/Someone-Zh/AppConfigFile/master/vim/.vimrc
 }
+function install_docker(){
+	 sh -c "$(curl -fsSL get.docker.com)" --mirror Aliyun
+}
 function main(){
 	install_omzgit
 	install_vim
 }
+
 main $@
